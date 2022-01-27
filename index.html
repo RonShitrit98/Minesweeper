@@ -1,25 +1,37 @@
 <html>
+
 <head>
     <link rel="stylesheet" href="css/main.css">
-    <title>Mine Sweeper</title>
+    <title>Ms. Mine Sweeper</title>
 </head>
 
 
 <body onload="init()">
-    <!-- oncontextmenu="markCell(this, event)" -->
-    <div class="timer">Timer<span class="time"> 0:0</span></div>
-    <div class="lvls">
-        <button onclick="changeLvl(1)">easy</button>
-        <button onclick="changeLvl(2)">medium</button>
-        <button onclick="changeLvl(3)">expert</button>
-    </div>
-        <div class="gameover">
-    
-    </div>
-    <table class="board"></table>
+    <!-- <div class="gameover"></div> -->
 
-<script src="js/util.js"></script>
-<script src="js/game.js"></script>
+    <div class="game">
+        <div class="miner" onclick="init()"></div>
+        <div class="victory">Victory!</div>
+        <div class="sidebar">
+            
+            <div class="timer">Timer<span class="time"> 0:0</span></div>
+            <div class="lvls">
+                <button onclick="changeLvl(1)">easy</button>
+                <button onclick="changeLvl(2)">medium</button>
+                <button onclick="changeLvl(3)">expert</button>
+            </div>
+        </div>
+        
+        <table class="board"></table>
+        
+        <div class="lives"></div>
+
+    </div>
+
+
+    <script src="js/util.js"></script>
+    <script src="js/game.js"></script>
 
 </body>
+
 </html>

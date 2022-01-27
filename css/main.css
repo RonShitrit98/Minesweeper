@@ -1,65 +1,167 @@
 body{
-    background-color: rgb(209, 246, 193);
+    /* background-color: #F2AAE9; */
+    background-color: #A2c3fa;
+    height: 100%;
+    overflow: hidden;
+}
+
+.game{
+  
+background-color: #F2AAE9;
+max-width: 1100px;
+height: 100%;
+margin: auto;
+padding: 20px;
+text-align: center;
+vertical-align: middle;
+border:#a98fdb dotted 8px
 }
 .board{
-    /* margin-bottom: 60px; */
-    background-color: #A3F0F0;
-    margin: auto;
+    display:table;
+    position: absolute;
+    height: 550px;
+    width: 550px;
+    margin:auto;
+    top:1%;
+    background-color: #a2cffa;
+    vertical-align: middle;
+    position:relative;
+    table-layout: fixed;
+    word-wrap:break-word;
+    border:#F2aae9 solid 1px;
 }
+/* table{
+    table-layout: fixed;
+    display: table;
+} */
+
+/* tr{
+    row-gap: absolute;
+} */
 .cell{
+height: 40px;
+width: 40px;
+    overflow: hidden;
+    border-spacing: 0;
+    white-space: nowrap;
+    display: table-cell;
     text-align: center;
-    height: 50px;
-    width: 50px;
-    border:rgb(139, 76, 140) solid 1px;
-  
+    font-size: auto;
+    border:#F2aae9 solid 1px;
+    
     
 }
+.cell img{
+ /* width: 80%; */
+ height: 100%;
+}
 .hidden{
-    font-size: 0;
-    background-color: rgb(69, 183, 183);
+    /* visibility: hidden; */
+    background-color: #a98fdb;
 }
 
 .flag{
-    /* background-image: url("img/flag.png"); */
-    background-color: red;
+    max-width: 100%;
+    margin: auto;
+    min-width: 10px;
 }
 
 .gameover{
     display: none;
     position: absolute;
-    /* top:30%;
-    right:40%; */
+    right:40%; 
     box-shadow: 13px 11px 15px 5px rgba(0,0,0,0.6);
     background-color: cornflowerblue;
     z-index: 3;
+    left: 65%;
     width: 260px;
     height:min-content 100px;
     text-align: center;
     margin: auto;
     padding: 10px; 
+    top: 10%;
 
 }
 
 .mine{
-    
-    background-color: #6E524E;
+    background-color: #626262;
 }
 
-.mine.clicked{
-    background-color: rgb(245, 118, 101);
+.clicked{
+    background-color: #db2104;
+}
+.sidebar{
+
+    bottom: 3%;
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    position:fixed;
+    size-adjust:inherit;
+    width:200px;
+    height:90%;
+    overflow:hidden;
+    margin: 10px;
+    /* background-color:#fad0a2; */
+    border: #db2104 dotted 6px;
+    background-color:rgb(255, 136, 181);
+  
 }
 
+button{
+    display: block;
+    padding:30px;
+    margin:20px;
+    background-color: #ecb9e5;
+    font-size: 20px;
+}
+button:hover{
+    background-color: antiquewhite;
+}
 .lvls{
     margin: auto;
-    width: 500px;
-    height: 50px;
+    bottom: 40%;
+    vertical-align: middle;
+
+    position: fixed;
+    margin:20px auto;
+    /* width: 500px; */
+    /* height: 50px;  */
     text-align: center;
 }
 .timer{
-    margin: auto;
-    width: 300px;
+    display: block;
+    position: relative;
+    margin:20px auto;
+    width: 100px;
     height: 30px; ;
     text-align: center;
     font-size: 25px;
 
+}
+.lives{
+    border: #db2104 dotted 6px;
+    display: block;
+    bottom: 20%;
+    left: 76%;
+    text-align: center;
+    position:relative;
+    max-width:150px;
+    max-height:80px;
+    padding: 50px;
+    font-size: 30px;
+    margin: 10px;
+    background-color:rgb(255, 136, 181);
+}
+.lives img{
+    width: 50px;
+}
+.miner img{
+    position:relative;
+    height: 100px;
+    display: inline;
+
+}
+.victory{
+    visibility: hidden;
+    font-size: 50px;
 }
