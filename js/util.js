@@ -29,3 +29,12 @@ function getRandomInt(min, max) {
     //  console.log(cellIdx)
      return cellIdx
   }
+
+  function getCellIdStr(cellIdx) {
+    var cellId = `cell${cellIdx.i}-${cellIdx.j}`
+    return cellId
+}
+function getElCell(cellIdx) {
+    var elCell = document.querySelector(`.${getCellIdStr(cellIdx)}`)
+    return elCell
+}
